@@ -1,0 +1,275 @@
+/*Created by Shelley Ophir
+Coding Dojo Sep. ,2020
+Break down the image below into proper HTML and CSS.*/
+
+*{
+    margin: 0;
+    padding: 0;
+    /*outline: 1px dashed red;*/
+    font-family: sans-serif;
+}
+
+#wrapper{
+    width: 915px;
+    height: 760px;
+    background-color: #245076;
+    margin: 0 auto;
+
+}
+
+#header{
+    width: 915px;
+    height: 100px;
+    padding: 10px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#header img{
+    height: 100px;
+    margin-left: 10px;
+}
+
+#search_bar{
+    color:white;
+}
+
+#header span{
+    color: black;
+}
+
+#search_bar p{
+    font-size: 13px;
+    margin-right: 70px;
+    text-align: end;
+}
+
+#search_bar a{
+    color: #d0b000;
+    font-size: 13px;
+}
+
+#search{
+    width: 260px;
+    height: 60px;
+    border-radius: 13px;
+    background-color: #444444;
+    margin-right: 27px;
+    margin-top: 5px;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 2px 2px 0px black;/*adds shadow behind the search bar*/
+    
+}
+
+input{
+    padding: 10px;
+    font-size: 11px;
+    text-align: center;
+    color: gray;
+
+    box-shadow: inset 2px 2px 0px gray;
+}
+
+#search a{
+    color: white;
+    width: 18px;
+    height: 10px;
+    background-color: #245076;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 12px;
+    margin-left: 5px;
+    box-shadow:  -1px -1px 0 0 white;/*gives button a pop-up look*/ 
+}
+
+#nav{
+    height: 25px;
+    width: 800px;
+    border-radius: 6px;
+    color: white;
+    font-size: 22px;
+    background-image: linear-gradient(#3877ad,#497fad,#3877ad);
+    padding: 10px;
+    margin: 0 auto;
+    box-shadow: 2px 2px 0 black;
+}
+
+#nav ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+#main{
+    width: 500px;
+    height: 335px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ #main ul{
+    text-align: center;
+    width: 162px;
+    list-style-type: none;
+    margin-bottom: 46px;
+}
+
+#main li{
+    padding: 6px;
+}
+
+
+/*this will add the >> as the bullet point. ::before creates a pseudo-element 
+that is the first child of the  
+selected element*/
+#main li::before{
+    content: "\00BB";/*this is the unicode for >>*/
+    color: #e2c239;
+    margin-right: 5px;
+}
+
+#links a{
+    color:white;
+}
+
+#text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#p1{
+    color: white;
+    font-size: 14px;
+    width: 615px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#p2{
+    color: #e2c239;
+    font-size: 19px;
+    font-style: italic;
+    width: 310px;
+    text-align: center;
+    line-height: 30px;
+    padding: 10px 0;
+}
+
+#p3{
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+
+#white{
+    width: 915px;
+    height: 255px;
+    background-color: white;
+
+    display: inline-block;/*not using flex as this site has a lot of off-center components that need to be manually pushed with margins*/
+
+    text-align: center;
+}
+
+.panel{
+    width: 272px;
+    margin: 0px 90px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.colorBar{
+    height: 4px;
+    background-color: #73a7d5;
+    width: 400px;
+    margin:12px 0 0 0;
+}
+
+h2{
+    color: black;
+    font-size: 16px;
+    margin: 7px 0 7px 11px;
+}
+
+.panel ul{
+    margin-left: 40px;
+}
+
+.panel li{
+    color: #7aabd7;
+    font-size: 14px;
+    padding: 4px 0;
+    width: 240px;
+    list-style-type: none;
+
+    /*the following aligns the custom bullets*/
+    padding-left: 9px;
+    position: relative;
+}
+
+/*this will add the >> as the bullet point. ::before creates a pseudo-element 
+that is the first child of the  
+selected element*/
+.panel li::before{
+    content: "\25AA";
+    color: black;
+    margin-right: 5px;
+    font-size: 28px;
+    display: inline-block;
+    position: absolute;/*in order to align bullets*/
+    left:0;
+    margin: -8px;
+}
+
+.panel span{
+    color:#7aabd7;
+    font-size: 11px;
+}
+
+.panel p{
+    font-size: 13px;
+}
+
+#footer{
+    background-image: linear-gradient(#25527a, #3373ab);
+    height: 100px;
+    width: 915px;
+    color:#7aabd7;
+}
+
+#footer ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    width: 644px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+#footer p{
+    text-align: center;
+    font-size: 10px;
+
+    align-self: flex-end;
+    margin-top: 14px;
+}
+
+#app{
+    width: 365px;
+    margin-left: -36px;
+}
+
+
+
